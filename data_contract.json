@@ -1,0 +1,68 @@
+{
+  "contract_name": "Iris Model Data Contract",
+  "contract_version": "1.0.0",
+  "description": "Contrato oficial para validar las variables de entrada del clasificador Iris y la codificación de su clase objetivo.",
+  "model_name": "iris_random_forest_classifier",
+  "target_variable": {
+    "name": "species",
+    "type": "integer",
+    "allowed_values": [
+      0,
+      1,
+      2
+    ],
+    "labels": {
+      "0": "setosa",
+      "1": "versicolor",
+      "2": "virginica"
+    }
+  },
+  "input_features": {
+    "sepal_length": {
+      "description": "Longitud del sépalo",
+      "type": "number",
+      "required": true,
+      "unit": "cm",
+      "min": 4.3,
+      "max": 7.9
+    },
+    "sepal_width": {
+      "description": "Ancho del sépalo",
+      "type": "number",
+      "required": true,
+      "unit": "cm",
+      "min": 2.0,
+      "max": 4.4
+    },
+    "petal_length": {
+      "description": "Longitud del pétalo",
+      "type": "number",
+      "required": true,
+      "unit": "cm",
+      "min": 1.0,
+      "max": 6.9
+    },
+    "petal_width": {
+      "description": "Ancho del pétalo",
+      "type": "number",
+      "required": true,
+      "unit": "cm",
+      "min": 0.1,
+      "max": 2.5
+    }
+  },
+  "examples": {
+    "valid_input": {
+      "sepal_length": 5.1,
+      "sepal_width": 3.5,
+      "petal_length": 1.4,
+      "petal_width": 0.2
+    },
+    "invalid_input": {
+      "sepal_length": null,
+      "sepal_width": 3.5,
+      "petal_length": 1.4,
+      "petal_width": 4.8
+    }
+  }
+}

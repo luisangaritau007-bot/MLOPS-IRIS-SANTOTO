@@ -1,0 +1,12 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+mlflow.db
+mlflow.db-journal
+mlruns/*
+!mlruns/.gitkeep
+data/*.csv
+data/processed/*.csv
+models/*
+!models/.gitkeep
